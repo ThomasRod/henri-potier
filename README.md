@@ -5,6 +5,6 @@ Node version : v0.10.25
 installer les modules :
 npm install
 
-exécuter en local :
+exécuter l'application :
 node bin/www
 
