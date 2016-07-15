@@ -13,6 +13,9 @@ router.get('/', function(req, res, next) {
 
 router.get('/panier', function(req, res, next) {
   var panier = JSON.parse(req.cookies.panier);
+  if(!panier){
+    return res.sendStatus(500);
+  }
   res.render('panier', {books: panier.products});
 });
 
