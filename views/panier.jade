@@ -1,0 +1,49 @@
+extends base/layout
+
+block content
+    h1  Panier
+    .panier-page
+        if (books.length)
+            table.table
+                thead
+                    tr
+                        th #
+                        th Titre
+                        th Quantité
+                        th Prix
+                tbody
+                    each book, i in books
+                        - var j = i + 1
+                        tr
+                            th(scope='row') #{j}
+                            td #{book.title}
+                            td
+                                select.form-control.quantity(data-isbn='#{book.isbn}')
+                                    option(value=1) 1
+                                    option(value=2) 2
+                                    option(value=3) 3
+                                    option(value=4) 4
+                                    option(value=5) 5
+                            td #{book.price}
+                            td
+                                img.delete(src='/img/delete.png' height='30px' width='30px' data-isbn='#{book.isbn}')
+            .offers
+                .row-price
+                    span.header-text-4 Sous-total
+                    span.price.header-text-5.float-right
+                .row-price
+                    span.header-text-4 Reduction
+                    span.reduction.header-text-5.float-right
+                .row-price
+                    span.header-text-4 Prix final
+                    span.final-price.header-text-5.float-right
+            .achat
+                a.btn.btn-block.keep-shopping(href='/')
+                    span.button-text POURSUIVRE LES ACHATS
+                a.btn.btn-block.buy(href='/')
+                    span.button-text PAYER
+        else
+            span.empty-cart Votre panier est vide !
+            a.btn.btn-block.keep-shopping(href='/')
+                span.button-text POURSUIVRE LES ACHATS
+

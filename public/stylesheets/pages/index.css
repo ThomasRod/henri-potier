@@ -1,0 +1,44 @@
+.apps{
+    float: left;
+    margin: 20px;
+    height: 270px;
+    width: 188px;
+    border-radius: 5px;
+    background-color: white;
+}
+
+.apps .cover{
+    height: 160px;
+    width: 188px;
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.apps:hover
+{
+    background-color: #bdbdbd;
+}
+
+.apps .cover img{
+    max-height: 129px;
+}
+
+.details ul > li{
+    text-align: center;
+    margin-bottom: 4px;
+}
+
+.form-main {
+    margin: 20px;
+}
+
+.btn.btn-default.remove-in-cart {
+    background-color: #448AFF;
+    color: white;
+}
+
+.btn.btn-default.remove-in-cart:hover {
+    background-color: #d7d7d7;
+    color: black;
+}

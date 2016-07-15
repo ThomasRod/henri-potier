@@ -1,0 +1,16 @@
+extends base/layout
+
+block content
+    .main-page
+        each book in books
+            .apps(data-isbn='#{book.isbn}', data-title='#{book.title}', data-price='#{book.price}')
+                .cover
+                    img(src='#{book.cover}', alt='cover')
+                .details
+                    ul.nav
+                        li
+                            strong #{book.title}
+                        li
+                            span #{book.price} €
+                        li
+                            button.btn.btn-default(type='button')

@@ -1,0 +1,35 @@
+doctype html
+html
+  head
+    title=title
+    link(rel='stylesheet', href='/stylesheets/common.css')
+    link(rel='stylesheet', href='/stylesheets/pages/index.css')
+    link(rel='stylesheet', href='/stylesheets/pages/panier.css')
+    link(rel='stylesheet', href='/stylesheets/bootstrap/bootstrap.min.css')
+    script(src='/js/jquery/jquery-2.1.3.min.js')
+    script(src='/js/js-cookie/js.cookie.js')
+    script(src='/js/bootstrap/bootstrap.min.js')
+    script(src='/js/common.js')
+    script(src='/js/pages/main.js')
+    script(src='/js/pages/panier.js')
+  body
+    nav.navbar.navbar-default.navbar-inverse.navbar-fixed-top(role='navigation')
+      .container
+        .navbar-header
+          button.navbar-toggle.collapsed(type='button', data-toggle='collapse', data-target='#navbar', aria-expanded='false', aria-controls='navbar')
+            span.sr-only Toggle navigation
+            span.icon-bar
+            span.icon-bar
+            span.icon-bar
+          a.navbar-brand(href='/') Xebia-Potier
+    .divide-nav
+    nav.navbar.navbar-default.navbar-lower(role='navigation')
+      .container
+        #bs-example-navbar-collapse-1.collapse.navbar-collapse
+          ul.nav.navbar-nav
+            li
+              a(href='/panier')
+                img(src='/img/cart.png', height='40px', width='40px')
+                span.items-in-cart(data-item-count='0', aria-hidden='true', data-test='')
+    #main-content.container
+      block content

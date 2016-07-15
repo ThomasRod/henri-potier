@@ -1,0 +1,46 @@
+.delete {
+    cursor: pointer;
+}
+
+.offers {
+    border-top: 1px solid #c2c2c2;
+    display: inline-block;
+    width: 100%;
+    padding: 16px 0;
+}
+
+.row-price {
+    padding: 10px;
+}
+
+.btn.btn-block.keep-shopping {
+    margin-bottom: 25px; !important;
+    background-color: #fafafa;
+    height: 70px;
+}
+
+a:hover {
+    color: #3b78e7;
+}
+
+.keep-shopping .button-text {
+    color: #848484;
+}
+
+.btn.btn-block .button-text {
+    display: inline-block;
+    vertical-align: top;
+    line-height: 60px;
+    font-size: 1.125rem;
+}
+
+.empty-cart {
+    font-size: 50px;
+}
+
+.btn.btn-block.buy {
+    background-color: #448AFF;
+    color: white;
+    margin-bottom: 20px;
+    height: 70px;
+}
